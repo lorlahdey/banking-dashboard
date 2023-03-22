@@ -675,7 +675,7 @@ header {
     .main-container {
         display: grid;
         column-gap: 1.8rem;
-        grid-template-columns: auto;
+        grid-template-columns: 100%;
         grid-template-areas:
             "left"
             "right";
