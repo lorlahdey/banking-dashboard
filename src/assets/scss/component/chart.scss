@@ -1,0 +1,19 @@
+.apexcharts-tooltip,
+.apexcharts-tooltip-title {
+    background-color: $brand-primary2 !important;
+    color: $brand-white !important;
+    border-bottom: none !important;
+}
+
+.apexcharts-tooltip-title {
+    border-bottom: none !important;
+    // order: 2 !important;
+}
+
+.apexcharts-toolbar {
+    display: none !important;
+}
+
+.apexcharts-tooltip-text-y-label {
+    display: none !important;
+}

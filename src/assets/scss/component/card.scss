@@ -1,0 +1,159 @@
+.dashboard-card {
+    &.card-1 {
+        padding: 16.82px 20px 17.44px 17.87px ;
+        box-shadow: 0px 10.9688px 21.9375px rgba(122, 122, 122, 0.2);
+        border-radius: 10.2375px;
+    }
+    &.card-2 {
+        padding: 5.82px 20px 17.44px 17.87px ;
+        box-shadow: 0px 10.9688px 21.9375px rgba(118, 118, 118, 0.2);
+        border-radius: 10.2375px;
+    }
+    &.bordered-card-1 {
+        padding: 16.82px 20px 17.44px 17.87px;
+        border: 0.566969px solid #e6e8eB;
+        border-radius: 6.80363px;
+
+        .details {
+            &-left {            
+                p {
+                    font-size: 10.1278px;
+                    line-height: 12px;   
+                    color: $brand-grey2;
+                }
+            }
+            &-right {
+                p {
+                    font-size: 10.1278px;
+                    line-height: 12px;
+                    color: $brand-grey2;
+
+                    .currency-icon {
+                        color: $brand-grey2;
+                    }
+
+                    +.material-icons-sharp {
+                        color: $brand-grey2;
+                        font-size: 10.1278px;
+                    }
+                }
+
+                input {
+                    border: none;
+                    width: 100%;
+                    font-size: 21.2062px;
+                    line-height: 25px;
+                    color: $brand-primary;
+
+                    &::placeholder {
+                        font-size: 21.2062px;
+                        line-height: 25px;
+                        color: $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+    &.bordered-card-2 {
+        padding: 5.82px 20px 17.44px 17.87px;
+        border: 1.13394px solid #819CFD;
+        border-radius: 7.93757px;
+
+        .details {
+            &-left {
+                small {
+                    font-family: 'Gilroy-SemiBold';
+                    font-size: 10.296px;
+                    line-height: 12px;
+                    color: #A8B1BF;
+                }
+            }
+        
+            &-right {        
+                input {
+                    border: none;
+                    width: 100%;
+                    font-family: 'Gilroy-SemiBold';
+                    font-size: 14.7412px;
+                    line-height: 17px;
+                    color: #3D424B;
+    
+                    &::placeholder {
+                        font-size: 14.7412px;
+                        line-height: 17px;
+                        color: #3D424B;
+                    }
+                }
+            }
+        }
+    }
+    .details {
+        &-left {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            font-family: 'Gilroy-SemiBold', sans-serif;
+            p {
+                font-size: 8.775px;
+                line-height: 10px;
+                color: $brand-primary2;
+            }
+            small {
+                font-family: 'Gilroy-Medium', sans-serif;
+                font-size: 10.2375px;
+                line-height: 12px;
+                color: $brand-grey2;
+            }
+            img {
+                width: 21.36px;
+                height: 14.62px;
+            }
+        }
+
+        &-right {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Gilroy-SemiBold', sans-serif;
+
+            p{
+                white-space: nowrap;
+                font-size: 11.7px;
+                line-height: 14px;
+                color: $brand-primary;
+
+                .currency-icon{
+                    color: $icon-color;
+                }
+
+                +.material-icons-sharp {
+                    color: $icon-color;
+                    font-size: 11.7px;
+                }
+            }
+
+            input {
+                border: none;
+                width: 100%;
+                font-size: 21.2062px;
+                line-height: 25px;
+                color: $brand-primary;
+
+                &::placeholder {
+                    font-size: 21.2062px;
+                    line-height: 25px;
+                    color: $brand-primary;
+                }
+            }
+
+            .flag :last-child {
+                margin-left: -5px;
+            }
+            img {
+                width: 17.01px;
+                height: 17.01px;
+            }
+        }
+    }
+}

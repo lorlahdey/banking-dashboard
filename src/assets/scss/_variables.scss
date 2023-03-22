@@ -1,0 +1,32 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,700&display=swap');
+
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url("../fonts/Gilroy-Medium.ttf") format("truetype");
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gilroy-SemiBold";
+    src: url("../fonts/Gilroy-SemiBold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+//colors
+$brand-grey: #C1C1C1;
+$brand-grey2: #798BA3;
+$brand-white: #ffffff;
+$brand-black: #000000;
+$brand-blue: #0177FB;;
+$brand-primary: #131635;
+$brand-primary2: #141736;
+$icon-color: #A5B4CB;
+
+
+
+//fonts
+$poppins-family: 'Poppins', sans-serif;
+$sans-serif: "sans-serif";
+$Gilroy-SemiBold-family: 'Gilroy-SemiBold';
