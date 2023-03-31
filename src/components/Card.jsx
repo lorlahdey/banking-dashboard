@@ -1,6 +1,6 @@
 const DashboardCard = props => {
 
-    return <div className={`dashboard-card flex-fill bg-white ${props.class}`}> 
+    return <div className={`dashboard-card flex-fill bg-white ${props.classStyle}`}> 
             { props.children }         
     </div>
 }

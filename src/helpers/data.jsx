@@ -1,44 +1,46 @@
+import { routes } from "../routes"
+
 const navLists = [
     {
         name: 'Dashboard',
         imagesrc: 'images/dashboard/sidebar/dashboard.svg',
-        route:'/'
+        route: routes.Dashboard,
     },
     {
         name: 'Invoices',
         imagesrc: 'images/dashboard/sidebar/invoice.svg',
-        route:'/invoices'
+        route: routes.Invoices
     },
     {
         name: 'Messages',
         messageCount: "5",
         imagesrc: 'images/dashboard/sidebar/messages.svg',
-        route:'/messages'
+        route: routes.Messages
     },
     {
         name: 'My Wallet',
         imagesrc: 'images/dashboard/sidebar/wallet.svg',
-        route:'/wallet'
+        route: routes.MyWallet
     },
     {
         name: 'Activity',
         imagesrc: 'images/dashboard/sidebar/activity.svg',
-        route:'/activity'
+        route: routes.Activities
     },
     {
         name: 'Analytics',
         imagesrc: 'images/dashboard/sidebar/analytics.svg',
-        route:'/analytics'
+        route: routes.Analytics
     },
     {
         name: 'Get Help',
         imagesrc: 'images/dashboard/sidebar/get-help.svg',
-        route:'/get-help'
+        route: routes.GetHelp
     },
     {
         name: 'Settings',
         imagesrc: 'images/dashboard/sidebar/settings.svg',
-        route:'/settings'
+        route: routes.Settings
     },
 ]
 

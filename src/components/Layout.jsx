@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Dashboard from "../pages/Dashboard";
-import DashboardChart from "./Chart";
+import { Routes, Route, } from 'react-router-dom'
+import { PrivateRoutes } from "../routes/PrivateRoutes";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
@@ -18,7 +18,11 @@ const Layout = () => {
             <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar}/>
             <main>
                 <Header sidebarOpen={sidebarOpen} openSidebar={openSidebar}/>
-                <Dashboard />
+                <Routes>
+                    {PrivateRoutes.map((privateRoute, i) => {
+                        return <Route exact key={ i } path={ privateRoute.link } element={ privateRoute.component } />
+                    })}
+                </Routes>
             </main>
         </div>
     )

@@ -5,7 +5,6 @@
 @import "src/assets/scss/component/card";
 @import "src/assets/scss/component/chart";
 
-
 * {
     margin: 0;
     padding: 0;
@@ -48,6 +47,7 @@ ul {
     }
     h3 {
         font-size: 11.7px;
+        line-height: 18px;
         margin-bottom: 0;
     }
     .message-count {
@@ -66,7 +66,6 @@ ul {
         color: #0177FD;
         display: flex;
         align-items: center;
-        position: relative;
     
         .link {
             background: #E5F1FF;
@@ -206,11 +205,17 @@ header {
         border-radius: 50%;
     }
 }
+.page-title {
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 17.55px;
+    line-height: 21px;
+    margin-left: 7px;
+}
 
 .left {
     grid-area: left;
 
-    .my-card h2{
+    .my-card h2 {
         font-family: 'Gilroy-SemiBold', sans-serif;
         font-size: 17.55px;
         line-height: 21px;
@@ -394,11 +399,6 @@ header {
                     color: $brand-primary2;
                     padding:  6.95px 10.29px 7.38px;
                 }
-            }
-            img {
-                width: 100%;
-                height: auto;
-                object-fit: cover;
             }
         }
         .recent-contact {
@@ -597,19 +597,9 @@ header {
     }
 }
 
-.sidebar_responsive {
-    display: inline !important;
-    position: absolute;
-    left: 0;
-    width: 18rem;
-    z-index: 1000;
-    background-color: $brand-white;
-    box-shadow: 1rem 3rem 4rem #ffffff;
-}
-
 @include media-breakpoint-down(lg) {
     .container-layout {
-        grid-template-columns: 6rem auto;
+        grid-template-columns: 5rem auto;
     }
     aside {
         .logo h2 {
@@ -622,12 +612,64 @@ header {
             .link {
                 padding: 6px;
                 flex: unset;
+                margin-left: 1.8rem;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-only(md) {
+    .sidebar {
+        ul {
+            li {
+                .toolTip {
+                    display: inline-block !important;
+                    position: absolute;
+                    background-color: #E5F1FF;
+                    color: #0177FD;
+                    padding: 8px 15px;
+                    border-radius: 3px;
+                    left: 78px;
+                    margin-top: -30px;
+                    opacity: 0;
+                    visibility: hidden;
+                    font-size: 11.7px;
+                    letter-spacing: .5px;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: -4px;
+                        top: 10px;
+                        transform: rotate(45deg);
+                        width: 10px;
+                        height: 10px;
+                        background-color: inherit;
+                    }
+                }
+
+                &:hover {
+                    .toolTip {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
 }
 
 @include media-breakpoint-down(md) {
+    .sidebar_responsive {
+        display: inline !important;
+        position: absolute;
+        left: 0;
+        width: 18rem;
+        z-index: 1000;
+        background-color: $brand-white;
+        box-shadow: 1rem 3rem 4rem #ffffff;
+    }
     .container-layout {
         grid-template-columns: 1fr;
         grid-template-areas: "main";
@@ -684,6 +726,3 @@ header {
         margin: 0 auto;
     }
 }
-
-
-

@@ -1,19 +1,53 @@
-.apexcharts-tooltip,
-.apexcharts-tooltip-title {
+.chart {
+    max-height: 200px !important;
+    min-height: unset !important;
+}
+.apexcharts-tooltip {
     background-color: $brand-primary2 !important;
     color: $brand-white !important;
-    border-bottom: none !important;
-}
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    border-radius: 8.775px !important;
+    top: 0 !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+    overflow-x: visible !important;
+    border: unset !important;
 
-.apexcharts-tooltip-title {
-    border-bottom: none !important;
-    // order: 2 !important;
+    &::after {
+        content: "";
+        position: absolute;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        top: 100%;
+        left: 50%;
+        margin-left: -10px;
+        border-top: 5px solid $brand-primary2;
+        margin-top: -1px;
+        z-index: 1;
+    }
 }
 
 .apexcharts-toolbar {
     display: none !important;
 }
 
-.apexcharts-tooltip-text-y-label {
-    display: none !important;
+.toolTip{
+    &-box{
+        padding: 7.79px 14.59px 5.62px 6.52px;
+        border-radius: 8.775px;
+    }
+    &-titleBar {
+        span {
+            font-family: 'Gilroy-Medium';
+            font-size: 9.50625px;
+            line-height: 11px;
+            color: #868799;
+        }
+    }
+    &-value {
+        font-family: 'Gilroy-Bold';
+        font-size: 10.9688px;
+        line-height: 13px;
+        color: #FFFFFF;
+    }
 }

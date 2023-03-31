@@ -4,7 +4,7 @@ const MyCard = () => {
   return (
     <div className="left">
         <div className="my-card">
-            <h2 className="mb-4">My Card</h2>
+            <h2 className="mb-4 page-title">My Card</h2>
             <div className="payment-card">
                 <div className="payment-card-top">
                     <div className="card-name">
@@ -26,7 +26,7 @@ const MyCard = () => {
         <div className="send-money">
             <h2>Send Money</h2>
 
-            <DashboardCard class='mb-4 card-1'>
+            <DashboardCard classStyle='mb-4 card-1'>
                 <div className="details d-flex justify-content-between card-1">
                     <div className="details-left">
                         <img src="/images/dashboard/debit-logo.svg" alt="" />
@@ -41,14 +41,14 @@ const MyCard = () => {
                 </div>
             </DashboardCard>
 
-            <DashboardCard class='card-2 mb-3'>
+            <DashboardCard classStyle='card-2 mb-3'>
                 <div className="details d-flex flex-column justify-content-between" >
                     <div className="details-left mb-3">
                         <img src="/images/dashboard/Ellipse.svg" alt="" className="pe-2" />
                         <small className="text-muted">Enter the amount</small>
                     </div>
                     <div className="details-right">
-                        <input type="text" placeholder="$ 800.00"/>
+                        <span className="currency-icon">$</span><input type="text" placeholder="800.00"/>
                         <div className="flag d-flex">
                             <img src="/images/dashboard/usa.svg" alt="" />
                             <img src="/images/dashboard/flag.svg" alt="" />
@@ -72,7 +72,7 @@ const MyCard = () => {
         </div>
         <div className="quick-transfer">
             <h2>Quick Transfer</h2>
-            <DashboardCard class='mb-4 bordered-card-1'>
+            <DashboardCard classStyle='mb-4 bordered-card-1'>
                 <div className="details d-flex justify-content-between card-1">
                     <div className="details-left">
                         <img src="/images/dashboard/debit-logo.svg" alt="" />
@@ -86,7 +86,7 @@ const MyCard = () => {
                     </div>
                 </div>
             </DashboardCard>
-            <DashboardCard class='bordered-card-2 mb-3'>
+            <DashboardCard classStyle='bordered-card-2 mb-3'>
                 <div className="details  d-flex flex-column justify-content-between" >
                     <div className="details-left mb-2">
                         <small className="text-muted">Enter the amount</small>

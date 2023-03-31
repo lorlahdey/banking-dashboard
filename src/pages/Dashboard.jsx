@@ -46,8 +46,7 @@ const Dashboard = () => {
                                 <option value="">Year</option>
                             </select>
                         </div>
-                        <img src="/images/dashboard/chart.svg" alt="chart" />
-                        {/* <DashboardChart /> */}
+                        <DashboardChart />
                     </div>
                     <div className="recent-contact">
                         <div className="recent-contact-header d-flex justify-content-between align-items-center mb-2">

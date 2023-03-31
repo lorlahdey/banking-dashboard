@@ -2,12 +2,11 @@ const Header = ({sidebarOpen, openSidebar}) => {
 
     return (
         <header>
-            {/* <span class="material-icons-outlined menu" onClick={() => openSidebar()}> */}
-            <span class="material-icons-outlined menu" onClick={() => openSidebar()}>
+            <span className="material-icons-outlined menu" onClick={() => openSidebar()}>
                 menu
             </span>
             <div className="header-right">
-                <span class="material-symbols-rounded search">
+                <span className="material-symbols-rounded search">
                     search
                 </span>
                 <img src="/images/dashboard/notification-bell.png" alt="notification" className="bell"/>

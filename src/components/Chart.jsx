@@ -3,7 +3,7 @@ import Chart from "react-apexcharts"
 const DashboardChart = () => {
 
     const series= [{
-        // name: "Income",
+        name: "Income",
         data: [
         {
             x: "DEC 2",
@@ -19,7 +19,7 @@ const DashboardChart = () => {
         },
         {
             x: "DEC 5",
-            y: 2.7
+            y: 2.6
         },
         {
             x: "DEC 6",
@@ -27,117 +27,102 @@ const DashboardChart = () => {
         },
         {
             x: "DEC 7",
-            y: 2.8
+            y: 2.9
         },
         {
             x: "DEC 8",
-            y: 3.2
+            y: 3.3
         }
         ]
     }];  
   
     const options= {
         chart: {
-            // id: "simple-bar",
-            type: 'area',
-            height: 350,
+            id: "simple-bar",
+            fontFamily: 'Gilroy-SemiBold, sans-serif',
             zoom: {
                 enabled: false
             },
             foreColor: '#A5B4CB',
-            animations: {
-                initialAnimation: {
-                enabled: false
-                }
-            }
         },
         dataLabels: {
             enabled: false
         },
         stroke: {
+            show: true,
             width: 2,
             curve: 'smooth'
         },
-        // colors: ["white"],
-        theme: {
-            mode: 'light', 
-            palette: 'palette1', 
-            monochrome: {
-                enabled: false,
-                color: '#255aee',
-                shadeTo: 'light',
-                shadeIntensity: 0.65
-            },
-        },
+        colors: ["#0177FB"],
         fill: {
             type: 'gradient',
-            colors: ['#F44336', '#E91E63', '#9C27B0'],
+            colors: ['#E0ECFC', '#fff' ],
             gradient: {
-                shade: 'dark',
+                shade: 'light',
                 type: "vertical",
-                shadeIntensity: 0.5,
-                gradientToColors: '#5c26ff',
-                inverseColors: true,
-                opacityFrom: 1,
+                inverseColors: false,
+                opacityFrom: 0,
                 opacityTo: 1,
-                stops: [2, 18, 28, 100, 60, 150],
-                colorStops: []
+                stops: [2, 18, 28, 100, 60, 180, 250, 550],
             }
         },
-        title: {
-            text: '',
-            align: 'left'
-        },
-        subtitle: {
-            text: '',
-            align: 'left'
-        },
-        labels: 'Banking Chart',
         xaxis: {
-            style:{ fontSize:50, color:'red'},
-            // categories: ['DEC 2', 'DEC 3', 'DEC 4', 'DEC 5', 'DEC 6', 'DEC 7', 'DEC 8'],
+            labels: {
+                style:{ 
+                    fontFamily: 'Gilroy-SemiBold',
+                    fontSize: "9px",
+                    lineHeight: "9px",
+                },
+            },
+            axisTicks: {
+                show: false
+            }
         },
         yaxis: {
-            style:{ fontSize:50, color:'red'},
             labels: {
+                style:{  
+                    fontFamily: 'Gilroy-SemiBold',
+                    fontSize: "10px",
+                    lineHeight: "9px",
+                },
                 formatter: function (value) {
                     return value + "K";
                 }
             },
         },
         tooltip: {
-            x: {
-                formatter: function(value, { series, seriesIndex, dataPointIndex, w }) {
-                    return` <div class="arrow_box"> 
+            custom: function({series, seriesIndex, dataPointIndex, w}) {
+                return `<div class="toolTip-box">
+                            <div class="toolTip-titleBar">
                                 <img src="/images/dashboard/downward-arrow.svg" alt="arrow" />
-                                Income
-                            </div>`
-                    // return '<div class="arrow_box">' +
-                    //         "<span class='material-icons-outlined'>" + 'arrow_downward' + '</span>' +
-                    //         'Income' +
-                    //     '</div>'
-                }
-            },
-            y: {
-                formatter: function(value, { series, seriesIndex, dataPointIndex, w }) {
-                    return "$ " + value.toFixed(3) 
-                },
-                style: {
-                    fontSize: '40px',
-                    fontFamily: undefined
-                },          
-            },
+                                <span class="ms-2">Income</span>
+                            </div>
+                            <span class="toolTip-value">$ ${(series[seriesIndex][dataPointIndex]).toFixed(3)} </span> 
+                        </div>`
+            }, 
             marker: {
                 show: false,
             },
         },
         legend: {
             horizontalAlign: 'left'
+        },
+        grid: {
+            strokeDashArray: 6,
+            borderColor: '#EFF2F7',
+            position: "back",
+            row: {
+                opacity: 0.3
+            }, 
         }
     }
 
     return (
-        <Chart options={options}  series={series} width="80%" />
+        <Chart options={options}  series={series}  type="area"
+            width="100%"
+            height= "188"
+            className="mx-auto chart"
+        />
     )
 }
 

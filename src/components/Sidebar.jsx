@@ -7,7 +7,6 @@ const Sidebar = ({sidebarOpen, closeSidebar}) => {
         <aside className={`${sidebarOpen ? "sidebar_responsive" : "none"}`} >
             <div className="top">
                 <div className="logo">
-                    {/* <img src="/images/logo/openPay-logo.png" alt="openPay-logo" /> */}
                     <img src="/images/logo/blue-logo.svg" alt="openPay-logo" />
                     <h2>OpenPay</h2>
                 </div>
@@ -20,7 +19,7 @@ const Sidebar = ({sidebarOpen, closeSidebar}) => {
                     {navLists.map((navItem, index) => {
                         return (
                             <li key={index}>
-                                <NavLink to={navItem.route} className="navlink" activeClassName='active'>
+                                <NavLink to={navItem.route} className={ ({isActive}) => isActive ? 'active navlink' : 'navlink'} >
                                     <span className="link">
                                         <img src={navItem.imagesrc} alt="" />
                                         <h3>
@@ -31,6 +30,7 @@ const Sidebar = ({sidebarOpen, closeSidebar}) => {
                                             }
                                         </h3>
                                     </span>
+                                    <span class="toolTip d-none">{navItem.name}</span>
                                 </NavLink>
                             </li>
                         )
